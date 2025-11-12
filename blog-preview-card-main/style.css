@@ -76,9 +76,32 @@ body {
 }
 
 .blog-context h2 {
+  position: relative; /* positioning context for ::before */
+  overflow: hidden; /* hide overflow for fill effect */
   color: var(--black);
   font-weight: 800;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.blog-context h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* start hidden */
+  height: 100%;
+  color: var(--primary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 800;
+  transition: width 0.5s ease;
+  pointer-events: none;
+}
+
+.blog-context h2:hover::before {
+  width: 100%; /* fill on hover */
 }
 
 .blog-context p {
