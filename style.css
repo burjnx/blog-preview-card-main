@@ -80,7 +80,7 @@ body {
   overflow: hidden; /* hide overflow for fill effect */
   color: var(--black);
   font-weight: 800;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
   line-height: 1.4;
   cursor: pointer;
 }
@@ -106,7 +106,7 @@ body {
 
 .blog-context p {
   color: var(--text-gray);
-  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
   line-height: 1.5;
   font-weight: 500;
 }
